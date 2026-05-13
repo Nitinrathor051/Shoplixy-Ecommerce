@@ -7,30 +7,37 @@ const cors = require("cors");
 
 const app = express();
 
+// 🔥 CORS CONFIG (PRODUCTION READY)
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://shoplixy-ecommerce-cm2q.vercel.app"
+    ],
+    credentials: true,
+  })
+);
+
 // Middleware
-app.use(cors());
 app.use(express.json());
 
-// ✅ IMPORTANT: Add /api prefix
+// ✅ API routes
 app.use("/api", route);
 
-// Health / root route
+// Health check route
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
 // Database Connection
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB is Connected"))
   .catch((err) => {
     console.log("DB Connection Failed:", err.message);
   });
 
-// Server Creation
+// Server start
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
