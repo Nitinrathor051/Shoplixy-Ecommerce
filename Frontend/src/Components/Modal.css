@@ -1,0 +1,130 @@
+/* Modal Overlay */
+.auth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.auth-modal-content {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  width: 400px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-modal-content h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: #2e1d84; /* Purple color matching the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f6f2ff; /* Light purple background to unify */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.auth-modal-content h2 img {
+  width: 35px; /* Adjust to a familiar size */
+  height: auto;
+  vertical-align: middle;
+}
+
+
+/* Input Fields */
+.auth-modal-content input,
+.auth-modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+.auth-modal-content input:focus,
+.auth-modal-content select:focus {
+  border-color: #2e1d84; /* Purple for focus */
+  outline: none;
+}
+
+/* Button */
+.auth-modal-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f76a11; /* Orange from the icon */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.auth-modal-content button:hover {
+  background-color: #e5640f; /* Slightly darker orange */
+}
+
+/* Close Button */
+.auth-close-button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #2e1d84; /* Purple for consistency */
+}
+
+/* Switch Text */
+.auth-switch-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.auth-switch-text span {
+  color: #f76a11; /* Orange for links */
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .auth-modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .auth-modal-content h2 {
+    font-size: 18px;
+  }
+}

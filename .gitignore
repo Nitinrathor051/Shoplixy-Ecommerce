@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+
+# env files
+.env
+.env.local
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# build files
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# backend uploads (if large images stored locally)
+uploads/
+
+# coverage
+coverage/
+
+# react build
+frontend/build/

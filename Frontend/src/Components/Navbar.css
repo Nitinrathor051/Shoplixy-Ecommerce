@@ -1,0 +1,191 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(46, 29, 84);
+  padding: 8px 16px;
+  color: white;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.navbar-logo img {
+  width: 65px;
+  height: auto;
+}
+
+/* Nav Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: rgb(247, 106, 17);
+}
+
+/* Icons */
+.navbar-links li svg {
+  font-size: 22px;
+  color: white;
+}
+
+/* Buttons */
+.login-btn,
+.logout-btn {
+  font-size: 18px;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: rgb(247, 106, 17);
+  color: black;
+  border-color: rgb(247, 106, 17);
+}
+
+.logout-btn {
+  background-color: rgb(255, 77, 77);
+  color: white;
+  border: none;
+}
+
+.logout-btn:hover {
+  background-color: rgb(230, 0, 0);
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Search Bar Common */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Desktop Search */
+.desktop-search {
+  display: flex;
+  flex: 1;
+}
+
+/* Mobile Search */
+.mobile-search {
+  display: none;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.mobile-search .search-input {
+  width: 100%;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(46, 29, 84);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 15px 20px;
+    display: none;
+    z-index: 999;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+  }
+
+  .login-btn,
+  .logout-btn {
+    width: 90%;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .desktop-search {
+    display: none;
+  }
+
+  .mobile-search {
+    display: flex;
+  }
+
+  .search-form {
+    width: 90%;
+    max-width: 95%;
+    margin: 0;
+  }
+
+  .search-input {
+    font-size: 15px;
+    padding: 7px 10px;
+  }
+}
