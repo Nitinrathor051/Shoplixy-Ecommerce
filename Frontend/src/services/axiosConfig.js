@@ -1,8 +1,12 @@
 import axios from "axios";
 
-// ✅ Use Vite environment variable
+// ✅ Safe fallback (agar env missing ho)
+const BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://shoplixy-ecommerce-2.onrender.com";
+
 const instance = axios.create({
-  baseURL: `${import.meta.env.VITE_API_URL}/api`, // add /api if backend routes start with /api
+  baseURL: `${BASE_URL}/api`,
   headers: {
     "Content-Type": "application/json",
   },
