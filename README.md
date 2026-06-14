@@ -1,99 +1,144 @@
-Shoplixy-ecommerce
+Shoplixy – E-Commerce Platform
+Live Demo
 
-Shoplixy is a full-stack e-commerce app built using the MERN stack.
+Frontend: [https://shoplixy-ecommerce-cm2q.vercel.app/](https://shoplixy-ecommerce-cm2q.vercel.app/)
+Backend API: [https://shoplixy-ecommerce-2.onrender.com](https://shoplixy-ecommerce-2.onrender.com)
+GitHub Repository: [https://github.com/Nitinrathor051/Shoplixy-Ecommerce](https://github.com/Nitinrathor051/Shoplixy-Ecommerce)
 
-Tech Stack
+Project Overview
 
-React.js (Vite)
+Shoplixy is a full-stack e-commerce web application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The platform allows users to browse products, manage their shopping cart, place orders, and maintain personal profiles through a secure authentication system.
 
-Node.js and Express.js
+The project demonstrates full-stack web development concepts including REST API integration, database management, authentication, and responsive user interface design.
 
-MongoDB
+Features
 
-Axios and JWT
+User Authentication
+
+* User Registration
+* User Login
+* JWT-based Authentication
+* Protected Routes
+
+Product Management
+
+* Browse Products
+* View Product Details
+* Add Products
+* Product Data Management
+
+Shopping Cart
+
+* Add Products to Cart
+* Remove Products from Cart
+* Manage Cart Items
+
+Order Management
+
+* Place Orders
+* View Order History
+* Manage User Orders
+
+User Profile
+
+* User Profile Management
+* User-Specific Data Access
+
+## Tech Stack
+
+Frontend
+
+* React.js (Vite)
+* CSS3
+* Axios
+
+Backend
+
+* Node.js
+* Express.js
+
+Database
+
+* MongoDB
+* Mongoose
+
+Authentication
+
+* JWT (JSON Web Token)
+
+Tools
+
+* Git
+* GitHub
+* VS Code
+
+Architecture
+
+Frontend → REST APIs → Backend → MongoDB
+
+Backend Structure:
+
+* Routes → API Endpoints
+* Controllers → Business Logic
+* Models → Database Schemas
+* Middleware → Authentication
+
+Key Highlights
+
+* Full-stack MERN application
+* Secure JWT authentication
+* RESTful API architecture
+* MongoDB database integration
+* Responsive user interface
+* Product, Cart, and Order management
+* Frontend deployed on Vercel
+* Backend deployed on Render
 
 Installation
 
-Backend:
+Clone Repository
+
+```bash
+git clone https://github.com/Nitinrathor051/Shoplixy-Ecommerce.git
+```
+
+Backend Setup
+
+```bash
 cd Backend
 npm install
 npm start
+```
 
-Frontend:
+Create a `.env` file in Backend folder:
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+```
+
+Frontend Setup
+
+```bash
 cd Frontend
 npm install
 npm run dev
+```
 
-.env (in Backend folder)
-PORT=5000
-MONGODB_URI=your_mongo_uri
-JWT_SECRET=your_secret_key
+Future Enhancements
 
-Folder Structure
-Shoplixy-ecommerce
-├── .gitignore
-├── README.md
-├── Backend
-│ ├── package.json
-│ ├── package-lock.json
-│ └── src
-│ ├── server.js
-│ ├── controllers
-│ │ ├── cartController.js
-│ │ ├── orderController.js
-│ │ ├── productController.js
-│ │ ├── userController.js
-│ │ └── validator.js
-│ ├── middleware
-│ │ └── authMiddleware.js
-│ ├── models
-│ │ ├── cartModel.js
-│ │ ├── orderModel.js
-│ │ ├── productModel.js
-│ │ └── userModel.js
-│ └── routes
-│ └── route.js
-├── Frontend
-│ ├── package.json
-│ ├── package-lock.json
-│ ├── index.html
-│ ├── eslint.config.js
-│ ├── vite.config.js
-│ ├── public
-│ └── src
-│ ├── App.css
-│ ├── App.jsx
-│ ├── main.jsx
-│ ├── assets
-│ │ ├── icon.png
-│ │ └── react.svg
-│ ├── Components
-│ │ ├── LoginModal.jsx
-│ │ ├── Modal.css
-│ │ ├── Navbar.css
-│ │ ├── Navbar.jsx
-│ │ └── SignupModal.jsx
-│ ├── Pages
-│ │ ├── About.css
-│ │ ├── About.jsx
-│ │ ├── AddProduct.css
-│ │ ├── AddProduct.jsx
-│ │ ├── Cart.css
-│ │ ├── Cart.jsx
-│ │ ├── Contact.css
-│ │ ├── Contact.jsx
-│ │ ├── Home.css
-│ │ ├── Home.jsx
-│ │ ├── Order.jsx
-│ │ └── Profile.jsx
-│ └── services
-│ ├── axiosConfig.js
-│ ├── cartService.js
-│ ├── orderService.js
-│ ├── productService.js
-│ └── userService.js
+* Online Payment Gateway Integration
+* Admin Dashboard
+* Product Search and Filters
+* Product Reviews and Ratings
+* Wishlist Feature
+* Email Notifications
 
 Author
+
 Nitin Rathor
-Email: nitinrathor0505feaid@gmail.com
-GitHub: https://github.com/Nitinrathor051
+
+Email: [nitinrathor0505feaid@gmail.com](mailto:nitinrathor0505feaid@gmail.com)
+
+GitHub: [https://github.com/Nitinrathor051](https://github.com/Nitinrathor051)
